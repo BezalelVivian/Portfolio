@@ -1,0 +1,263 @@
+/* index.css — main global styles */
+
+:root {
+    --primary: #00ffff;
+    --bg: #0a0a0a;
+    --card: #111;
+    --text: #fff;
+    --font-main: 'Montserrat', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-main);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4%;
+    z-index: 50;
+  }
+  
+  .logo {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 6% 4rem;
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight {
+    color: var(--primary);
+  }
+  
+  .hero-content h2 {
+    color: var(--primary);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    background: var(--primary);
+    color: #000;
+    padding: 0.7rem 1.6rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+  }
+  
+  /* Section Titles */
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 5rem 0 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 3rem 8%;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Projects Section */
+  .projects-section {
+    background: #080808;
+    padding: 4rem 6%;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    background: var(--card);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+  
+  .project-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .project-content {
+    padding: 1rem;
+  }
+  
+  .project-tags {
+    margin-top: 0.5rem;
+  }
+  
+  .tag {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--primary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    margin-right: 0.3rem;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    padding: 4rem 6%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .skill-item {
+    margin-bottom: 1rem;
+  }
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .skill-bar {
+    height: 10px;
+    background: #222;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), #66ffff);
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 4rem 8%;
+    background: #080808;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: #111;
+    border: 1px solid #333;
+    color: var(--text);
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    background: var(--primary);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #050505;
+    text-align: center;
+    padding: 2rem;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 7rem;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
